@@ -19,9 +19,13 @@ const Button = ({ children, className, inverted, color, ...rest }) => {
       className={[classnames(["button", className])]}
       {...rest}
     >
-      {" "}{children}{" "}
+      {children}
     </button>
   );
 };
+Button.propTypes ={
+    color: PropTypes.object.isRequired,
+    inverted: PropTypes.bool
+}
 
 export default Button;

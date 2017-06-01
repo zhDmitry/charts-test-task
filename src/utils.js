@@ -3,7 +3,7 @@ export const marks = {
   25: "Last 24h",
   45: "Last 7 days",
   65: "Last 14 days",
-  85: "Last mounth",
+  85: "Last month",
   100: "Last year"
 };
 
