@@ -14,34 +14,8 @@ import {
   Legend
 } from "recharts";
 import config from "./constants";
+import {getData, marks} from './utils';
 
-const marks = {
-  25: "Last 24h",
-  45: "Last 7 days",
-  65: "Last 14 days",
-  85: "Last mounth",
-  100: "Last year"
-};
-
-
-
-const getData = (k) => {
-  const res = [];
-  let date = moment();
-  for (let i = 0; i < k/2; i++) {
-    date = date.add(1,'day');
-    console.log(date.format("ddd DD/MM/YYYY"));
-    res.push({
-      name: date.format("ddd DD/MM/YYYY"),
-      calories: 200 + Math.ceil(Math.random() * 1000),
-      fats: 200 + Math.ceil(Math.random() * 1000),
-      carbonohidrates: 0 + Math.ceil(Math.random() * 1000),
-      frozen: 200 + Math.ceil(Math.random() * 1000),
-    });
-  }
-  return res;
-};
-const data = getData();
 
 class App extends Component {
   state = {
@@ -55,7 +29,6 @@ class App extends Component {
   }
 
   onSlideChange = (v)=>{
-    console.log(v);
     this.setState({
       data: getData(v)
     })
@@ -87,7 +60,7 @@ class App extends Component {
             inverted={this.state.hidden["carbonohidrates"]}
             color={config.red}
           >
-            Carbonohidradtes
+            Carbohydrates
           </Button>
           <Button
             inverted={this.state.hidden["frozen"]}
