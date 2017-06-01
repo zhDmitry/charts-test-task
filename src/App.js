@@ -77,7 +77,7 @@ class App extends Component {
             Fats
           </Button>
         </div>
-        <ResponsiveContainer width={"100%"} height={800}>
+        <ResponsiveContainer aspect={1.5}>
           <LineChart
             data={this.state.data}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}

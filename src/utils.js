@@ -13,7 +13,7 @@ export const getData = (k) => {
   for (let i = 0; i < k/2; i++) {
     date = date.add(1,'day');
     res.push({
-      name: date.format("ddd DD/MM/YYYY"),
+      name: date.format("ddd DD/MM"),
       calories: 200 + Math.ceil(Math.random() * 1000),
       fats: 200 + Math.ceil(Math.random() * 1000),
       carbonohidrates: 0 + Math.ceil(Math.random() * 1000),

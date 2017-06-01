@@ -3,6 +3,7 @@
   display: flex;
   margin: 15px;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .slider-container{
   margin: 20px 100px 50px 100px;
