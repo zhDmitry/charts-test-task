@@ -13,7 +13,7 @@
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
-  "homepage": "https://github.com/zhDmitry/charts-test-task",
+  "homepage": "https://zhDmitry.github.io/charts-test-task",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
